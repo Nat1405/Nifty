@@ -1,7 +1,7 @@
-?;from xml.dom.minidom import parseString
+from xml.dom.minidom import parseString
 import urllib
 from pyraf import iraf
-import pyfits
+from astropy.io import fits
 import os, shutil, glob, math, logging
 import numpy as np
 from nifsDefs import getUrlFiles, getFitsHeader, FitsKeyEntry, stripString, stripNumber, datefmt, checkOverCopy, checkQAPIreq, checkDate, writeList, checkEntry, timeCalc

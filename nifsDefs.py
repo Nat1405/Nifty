@@ -1,5 +1,6 @@
 import time
-import sys, calendar, pyfits, urllib, shutil, glob, os, fileinput
+import sys, calendar, urllib, shutil, glob, os, fileinput
+from astropy.io import fits
 import numpy as np
 from xml.dom.minidom import parseString
 import logging

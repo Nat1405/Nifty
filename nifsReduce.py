@@ -5,7 +5,7 @@ iraf.nifs()
 iraf.gnirs()
 iraf.gemtools()
 from pyraf import iraffunctions
-import pyfits
+from astropy.io import fits
 import logging, os
 from nifsDefs import datefmt, listit, checkLists
 
