@@ -1,7 +1,7 @@
 #! python
 
 import sys
-sys.path.append(sys.prefix+/lib/python2.7/site-packages/src/)
+sys.path.append(sys.prefix+'/lib/python2.7/site-packages/src/')
 from optparse import OptionParser
 from optparse import OptionParser
 from pyraf import iraf
