@@ -12,7 +12,7 @@ iraf.nifs()
 iraf.gnirs()
 iraf.gemtools()
 from pyraf import iraffunctions
-import pyfits
+from astropy.io import fits
 from nifsDefs import datefmt, listit, writeList, checkLists, writeCenters, makeSkyList, MEFarith
 from nifsTelluric import extrap1d, readCube, readSpec, telCor
 

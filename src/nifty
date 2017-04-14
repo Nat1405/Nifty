@@ -1,3 +1,4 @@
+#! python
 from optparse import OptionParser
 from optparse import OptionParser
 from pyraf import iraf

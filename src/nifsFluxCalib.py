@@ -12,8 +12,7 @@ iraf.gemtools()
 import numpy as np
 import pylab as pl
 from pyraf import iraffunctions
-import pyfits
-from pyfits import getdata, getheader
+from astropy.io import fits
 from nifsDefs import convertRAdec, datefmt, writeList
 
 #--------------------------------------------------------------------#
