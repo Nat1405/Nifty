@@ -6,6 +6,5 @@ setup(name='nifty',
                     data_files=[('', ['src/vega_ext.fits']),
                                 ('', ['src/starstemp.txt']),
                                 ('', ['src/README.md']),
-                                ('', ['src/LICENSE']),
                                 ('', ['src/nifs_pipeline_june_2015.pdf'])],
                           )
