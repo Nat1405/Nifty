@@ -242,7 +242,7 @@ def start(telDirList, continuuminter, hlineinter, hline_method, spectemp, mag, o
 
 def mag2mass(name, path, spectemp, mag, band):
     starfile = 'std_star.txt'
-    kelvinfile = path+'/starstemp.txt'
+    kelvinfile = sys.prefix+'/starstemp.txt'
 
     sf = open(starfile,'w')
     klf = open (kelvinfile)
@@ -424,11 +424,11 @@ def vega(spectrum, band, path, hlineinter, airmass, t1, log, over):
     if os.path.exists("tell_nolines"+band+".fits"):
             if over:
                 os.remove("tell_nolines"+band+".fits")
-                tell_info = iraf.telluric(input=spectrum+"[1]", output='tell_nolines'+band, cal=path+'/vega_ext.fits['+ext+']', answer='yes', ignoreaps='yes', xcorr='yes', airmass = airmass, tweakrms='yes', inter=hlineinter, threshold=0.1, lag=3, shift=0., dshift=0.05, scale=.75, dscale=0.05, offset=0., smooth=1, cursor='', mode='al', Stdout=1)
+                tell_info = iraf.telluric(input=spectrum+"[1]", output='tell_nolines'+band, cal=sys.prefix+'/vega_ext.fits['+ext+']', answer='yes', ignoreaps='yes', xcorr='yes', airmass = airmass, tweakrms='yes', inter=hlineinter, threshold=0.1, lag=3, shift=0., dshift=0.05, scale=.75, dscale=0.05, offset=0., smooth=1, cursor='', mode='al', Stdout=1)
             else:
                 print "Output file exists and -over not set - skipping H line correction"
     else:
-        tell_info = iraf.telluric(input=spectrum+"[1]", output='tell_nolines'+band, cal=path+'/vega_ext.fits['+ext+']', answer='yes', ignoreaps='yes', xcorr='yes', airmass = airmass, tweakrms='yes', inter=hlineinter, threshold=0.1, lag=3, shift=0., dshift=0.05, scale=1., dscale=0.05, offset=0, smooth=1, cursor='', mode='al', Stdout=1)
+        tell_info = iraf.telluric(input=spectrum+"[1]", output='tell_nolines'+band, cal=sys.prefix+'/vega_ext.fits['+ext+']', answer='yes', ignoreaps='yes', xcorr='yes', airmass = airmass, tweakrms='yes', inter=hlineinter, threshold=0.1, lag=3, shift=0., dshift=0.05, scale=1., dscale=0.05, offset=0, smooth=1, cursor='', mode='al', Stdout=1)
 
     # record shift and scale info for future reference
     t1.write(str(tell_info)+'\n')
